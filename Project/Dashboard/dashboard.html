@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Company Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css"> <!-- You can link your CSS file here -->
+</head>
+<body>
+  <h1>Shannon health dashboard</h1>
+    <!-- Top Right Profile Button -->
+    <fieldset>
+    <div class="top-right-button">
+        <button id="profile-button"><img src="profile-icon.jpg" alt="Profile"></button>
+        <!-- Dropdown menu for profile options (to be added later with CSS/JS) -->
+        <label for="profile-dropdown"></label>
+          <select name="profile-dropdown" id="profile-dropdown">
+            <option value="Account">My Account</a>
+            <option value="Notifications">My notifications</a>
+            <option value="EHR">Back to EHR</a>
+            <option value="LogOut">Log Out</a>
+          </select>
+    </div>
+
+    <!-- Bottom Left Settings Button -->
+    <div class="bottom-left-button">
+        <button id="settings-button"><img src="settings-icon.png" alt="Settings"></button>
+        <!-- Dropdown menu for settings (to be added later with CSS/JS) -->
+        <label for="settings-dropdown"></label>
+          <select name="settings-dropdown" id="settings-dropdown">
+            <option value="Home">My Dashboard</a>
+            <option value="PatientSearch">Patient Search</a>
+            <option value="Option">Option</a>
+          </select>
+    </div>
+  </fieldset>
+
+    <!-- Middle Content Area -->
+    <div class="middle-content">
+        <!-- Add your form and information display here -->
+        <form>
+            <!-- Form elements and content here -->
+        </form>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
