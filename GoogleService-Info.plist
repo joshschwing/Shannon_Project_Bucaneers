@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyD8jgfVFHtkl6o1A9H_S-BANB5weXdHNo0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>860503539230</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Joshua-Schwing.Shannon-Health-Sync</string>
+	<key>PROJECT_ID</key>
+	<string>shannon-health-test</string>
+	<key>STORAGE_BUCKET</key>
+	<string>shannon-health-test.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:860503539230:ios:56f7da6134a239fe66b80f</string>
+</dict>
+</plist>
