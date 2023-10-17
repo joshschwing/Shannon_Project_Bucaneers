@@ -1,133 +1,161 @@
 /* Reset default margin and padding */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-h1 {
-  text-align: center;
-  font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Style for the body (background color, font, etc.) */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0; /* Set your desired background color */
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
 }
 
-/* Style for the top-right buttons (profile and settings) */
-.top-right-button {
-  position: absolute;
-  top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  right: 20px;
+/* Style for setting up the header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
 }
 
-/* Style for the profile button container */
-#profile-button-container {
-  margin-bottom: 10px;
+/* Style for setting up all the header buttons */
+#menu-button,
+.window-controls button {
+    font-size: 28px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style for the menu button sidbar */
+.sidebar {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 200px;
+    background: #fff;
+    border-right: 1px solid #ccc;
+}
+
+/* Style for menu dropdown items */
+.sidebar button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #fff;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+    cursor: pointer;
 }
 
 /* Style for the profile button itself */
 #profile-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  width: 36px; /* Button width */
-  height: 36px; /* Button height */
+    font-size: 28px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }
 
-/* Style for the profile button icon */
-#profile-button img {
-  width: 100%;
-  height: 100%;
-  fill: #333; /* Icon color */
-}
-
-/* Style for the profile dropdown */
-#profile-dropdown {
-  display: none;
-  position: absolute;
-  top: 50px; /* Dropdown position */
-  right: 0;
-  background-color: #fff; /* Dropdown background color */
-  border: 1px solid #ccc; /* Dropdown border */
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Dropdown box shadow */
-  z-index: 1;
+/* Style for the profile button sidebar */
+.profile-bar {
+    display: none;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    background: #fff;
+    border-right: 1px solid #ccc;
 }
 
 /* Style for profile dropdown items */
-#profile-dropdown a {
-  display: block;
-  padding: 15px;
-  text-decoration: none;
-  color: #333;
-  transition: background-color 0.3s;
+.profile-bar button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #fff;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    text-align: right;
+    cursor: pointer;
 }
 
-#profile-dropdown a:hover {
-  background-color: #f0f0f0; /* Hover background color */
+/* Style for the notification button itself */
+#notification-button {
+    margin-right: 15px;
+    font-size: 28px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }
 
-/* Style for the settings button container */
-#settings-button-container {
-  margin-bottom: 10px;
+/* Style for the notification button sidebar */
+.notification-bar {
+    display: none;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    background: #fff;
+    border-right: 1px solid #ccc;
 }
 
-/* Style for the settings button itself */
-#settings-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  width: 36px; /* Button width */
-  height: 36px; /* Button height */
+/* Style for notification dropdown items */
+.notification-bar button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #fff;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    text-align: right;
+    cursor: pointer;
 }
 
-/* Style for the settings button icon */
-#settings-button img {
-  width: 100%;
-  height: 100%;
-  fill: #333; /* Icon color */
+/* Style for the boxes */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
 }
 
-/* Style for the settings dropdown */
-#settings-dropdown {
-  display: none;
-  position: absolute;
-  top: 50px; /* Dropdown position */
-  right: 0;
-  background-color: #fff; /* Dropdown background color */
-  border: 1px solid #ccc; /* Dropdown border */
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Dropdown box shadow */
-  z-index: 1;
+/* Style for the content within the boxes */
+.box {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 10px;
 }
 
-/* Style for settings dropdown items */
-#settings-dropdown a {
-  display: block;
-  padding: 15px;
-  text-decoration: none;
-  color: #333;
-  transition: background-color 0.3s;
+@media screen and (min-width: 768px) {
+    /* This will apply styles for devices wider than 768px */
+    .content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .box {
+        width: calc(50% - 10px); /* Subtracting the gap */
+    }
 }
 
-#settings-dropdown a:hover {
-  background-color: #f0f0f0; /* Hover background color */
-}
+@media screen and (max-width: 768px) {
+    .header h1 {
+        font-size: 24px; /* Reduce the font size on mobile */
+        text-align: center;
+    }
 
-/* Style for the middle content area (placeholder, adjust as needed) */
-.middle-content {
-  position: static;
-  top: 60px; /* Adjust top margin for content area */
-  left: 20px; /* Adjust left margin for content area */
-  right: 20px; /* Adjust right margin for content area */
-  bottom: 60px; /* Adjust bottom margin for content area */
-  background-color: #fff; /* Content area background color */
-  border: 1px solid #ccc; /* Content area border */
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Content area box shadow */
+    .window-controls {
+        display: flex;
+        flex-direction: row; /* Ensure buttons are side-by-side */
+        gap: 5px; /* Spacing between buttons */
+    }
+
+    #notification-button,
+    #profile-button {
+        font-size: 24px; /* Reduce the icon size on mobile */
+    }
 }

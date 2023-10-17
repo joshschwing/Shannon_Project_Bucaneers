@@ -1,50 +1,65 @@
-// Function to toggle the display of a dropdown menu
-function toggleDropdown(buttonId) {
-    var dropdown = document.getElementById(buttonId + '-dropdown');
-    if (dropdown.style.display === 'block') {
-        dropdown.style.display = 'none';
+// Event listeners for buttons
+document.getElementById("menu-button").addEventListener("click", toggleSidebar);
+document.getElementById("notification-button").addEventListener("click", toggleNotifications);
+document.getElementById("profile-button").addEventListener("click", toggleProfile);
+
+// Function to toggle the sidebar
+function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    if (sidebar.style.display === "block") {
+        hideAll();
+        return; // exit the function early
+    }
+    hideAll(); // Hide all dropdowns first
+    toggleElement(sidebar);
+}
+
+// Function to toggle the notifications bar
+function toggleNotifications() {
+    const notifications = document.getElementById("notification-bar");
+    if (notifications.style.display === "block") {
+        hideAll();
+        return; // exit the function early
+    }
+    hideAll(); // Hide all dropdowns first
+    toggleElement(notifications);
+}
+
+// Function to toggle the profile bar
+function toggleProfile() {
+    const profile = document.getElementById("profile-bar");
+    if (profile.style.display === "block") {
+        hideAll();
+        return; // exit the function early
+    }
+    hideAll(); // Hide all dropdowns first
+    toggleElement(profile);
+}
+
+// General function to toggle the visibility of an element
+function toggleElement(element) {
+    if (getComputedStyle(element).display === "none") {
+        element.style.display = "block";
     } else {
-        dropdown.style.display = 'block';
+        element.style.display = "none";
     }
 }
 
-// Event listener for the profile button
-document.getElementById('profile-button').addEventListener('click', function () {
-    toggleDropdown('profile');
-});
+// Function to hide all dropdowns
+function hideAll() {
+    document.getElementById("sidebar").style.display = "none";
+    document.getElementById("notification-bar").style.display = "none";
+    document.getElementById("profile-bar").style.display = "none";
+}
 
-// Event listener for the settings button
-document.getElementById('settings-button').addEventListener('click', function () {
-    toggleDropdown('settings');
-});
-
-// Close the dropdown when clicking outside
-window.addEventListener('click', function (event) {
-    var dropdowns = document.querySelectorAll('.dropdown');
-    for (var i = 0; i < dropdowns.length; i++) {
-        var dropdown = dropdowns[i];
-        if (event.target !== dropdown.previousElementSibling && !dropdown.contains(event.target)) {
-            dropdown.style.display = 'none';
-        }
+// Close dropdowns when clicking outside
+document.addEventListener("click", function (event) {
+    if (
+        !event.target.closest(".header") &&
+        !event.target.closest(".sidebar") &&
+        !event.target.closest(".notification-bar") &&
+        !event.target.closest(".profile-bar")
+    ) {
+        hideAll();
     }
-});
-
-// Handle select change for profile dropdown
-document.getElementById('profile-dropdown').addEventListener('change', function () {
-  var selectedOption = this.value;
-  // Handle the selected option as needed, e.g., redirect to a page
-  if (selectedOption === 'Account') {
-      // Redirect to My Account page
-      window.location.href = 'myaccount.html';
-  } else if (selectedOption === 'Notifications') {
-      // Redirect to Notifications page
-      window.location.href = 'notifications.html';
-  } else if (selectedOption === 'EHR') {
-      // Redirect to Back to EHR page
-      window.location.href = 'ehr.html';
-  } else if (selectedOption === 'LogOut') {
-      // Handle log out logic, e.g., clearing session
-      // Then redirect to the logout page
-      window.location.href = 'logout.html';
-  }
 });

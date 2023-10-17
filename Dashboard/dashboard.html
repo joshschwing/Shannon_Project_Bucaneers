@@ -1,48 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Company Dashboard</title>
-    <link rel="stylesheet" href="dashboard.css"> <!-- You can link your CSS file here -->
-</head>
-<body>
-  <h1>Shannon health dashboard</h1>
-    <!-- Top Right Profile Button -->
-    <fieldset>
-    <div class="top-right-button">
-        <button id="profile-button"><img src="profile-icon.jpg" alt="Profile"></button>
-        <!-- Dropdown menu for profile options (to be added later with CSS/JS) -->
-        <label for="profile-dropdown"></label>
-          <select name="profile-dropdown" id="profile-dropdown">
-            <option value="Account">My Account</a>
-            <option value="Notifications">My notifications</a>
-            <option value="EHR">Back to EHR</a>
-            <option value="LogOut">Log Out</a>
-          </select>
-    </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Health Company Dashboard</title>
+        <link rel="stylesheet" href="dashboard.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    </head>
+    <body>
+        <div class="header">
+            <!-- Top left menu button -->
+            <button id="menu-button">☰</button>
+            <h1>Shannon Health Dashboard</h1>
+            <!-- Top right buttons. notifications, profile -->
+            <div class="window-controls">
+                <button id="notification-button">✉</button>
+                <button id="profile-button" style="font-size: 24px"><i class="fa fa-user"></i></button>
+            </div>
+        </div>
 
-    <!-- Bottom Left Settings Button -->
-    <div class="bottom-left-button">
-        <button id="settings-button"><img src="settings-icon.png" alt="Settings"></button>
-        <!-- Dropdown menu for settings (to be added later with CSS/JS) -->
-        <label for="settings-dropdown"></label>
-          <select name="settings-dropdown" id="settings-dropdown">
-            <option value="Home">My Dashboard</a>
-            <option value="PatientSearch">Patient Search</a>
-            <option value="Option">Option</a>
-          </select>
-    </div>
-  </fieldset>
+        <!-- Drop down menu for the menu sidebar-->
+        <div class="sidebar" id="sidebar">
+            <a style="text-decoration: none" href="home.html"><button>Home</button></a>
+            <a style="text-decoration: none" href="patient_search.html"><button>Patient Search</button></a>
+            <a style="text-decoration: none" href="option.html"><button>Option</button></a>
+            <a style="text-decoration: none" href="option_two.html"><button>Option</button></a>
+        </div>
+        <!-- Drop down menu for the notification sidebar-->
+        <div class="notification-bar" id="notification-bar">
+            <a style="text-decoration: none" href="messages.html"><button>My Messages</button></a>
+            <a style="text-decoration: none" href="ugent_alerts.html"><button>My Urgent Alerts</button></a>
+            <a style="text-decoration: none" href="notifications.html"><button>My Notifications</button></a>
+            <a style="text-decoration: none" href="option_three.html"><button>Option</button></a>
+        </div>
+        <!-- Drop down menu for the profile sidebar-->
+        <div class="profile-bar" id="profile-bar">
+            <a style="text-decoration: none" href="account.html"><button>My Account</button></a>
+            <a style="text-decoration: none" href="ehr.html"><button>Back to EHR</button></a>
+            <a style="text-decoration: none" href="logout.html"><button>Log Out</button></a>
+            <a style="text-decoration: none" href="option_four.html"><button>Option</button></a>
+        </div>
 
-    <!-- Middle Content Area -->
-    <div class="middle-content">
-        <!-- Add your form and information display here -->
-        <form>
-            <!-- Form elements and content here -->
-        </form>
-    </div>
+        <!-- Middle Content Area -->
+        <div class="content">
+            <div class="box quick-links">
+                <h2>Quick Links</h2>
+                <!-- You can insert any quick links you want here -->
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla
+                    quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.
+                </p>
+            </div>
+            <div class="box critical-alerts">
+                <h2>Critical Alerts</h2>
+                <!-- You can insert any alerts you want here -->
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla
+                    quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.
+                </p>
+            </div>
+        </div>
 
-    <script src="dashboard.js"></script>
-</body>
+        <script src="dashboard.js"></script>
+    </body>
 </html>
