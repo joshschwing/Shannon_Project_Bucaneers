@@ -11,3 +11,6 @@ https://github.com/joshschwing/Shannon_Project_Bucaneers/wiki
 
 Manuel:
 Here is the link to the manuel: 
+
+
+https://github.com/joshschwing/Shannon_Project_Bucaneers/wiki/User-Manual
