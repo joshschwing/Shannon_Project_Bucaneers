@@ -4,6 +4,7 @@ Welcome to the Shannon Web App repository. The Shannon program tool is designed 
 
 Wiki:
 Here is the link to the wiki
+https://github.com/joshschwing/Shannon_Project_Bucaneers/wiki
 
 
 
