@@ -9,7 +9,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>Joshua-Schwing.Shannon-Health-Sync</string>
+	<string>cometo.Shannon-Health-Sync</string>
 	<key>PROJECT_ID</key>
 	<string>shannon-health-test</string>
 	<key>STORAGE_BUCKET</key>
@@ -25,6 +25,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:860503539230:ios:56f7da6134a239fe66b80f</string>
+	<string>1:860503539230:ios:15a447517b950c2866b80f</string>
+	<key>DATABASE_URL</key>
+	<string>https://shannon-health-test-default-rtdb.firebaseio.com</string>
 </dict>
 </plist>
