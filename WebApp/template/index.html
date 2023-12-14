@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<!-- SHANNON PROJECT DASHBOARD -->
+<html lang="en">
+  <head>
+    <style>
+      /* Change the text color for the logo */
+      .az-header-left .az-logo {
+        color: green;
+      }
+  
+      /* Change the text color for the links in the header menu */
+      .az-header-menu .nav-link {
+        color: green;
+      }
+  
+      /* Change the text color for headings */
+      h1, h2, h3, h4, h5, h6 {
+        color: green;
+      }
+  
+      /* Change the text color for other elements as needed */
+      /* Example: Change the text color for paragraph elements */
+      p {
+        color: rgb(1, 92, 57);
+      }
+ 
+      .btn-green {
+        background-color: green;
+        color: white;
+      }
+
+    </style>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90680653-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-90680653-2');
+    </script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="Responsive Bootstrap 4 Dashboard Template">
+    <meta name="author" content="BootstrapDash">
+
+    <title>Shannon Health App</title>
+
+    <!-- vendor css -->
+    <link href="../lib/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="../lib/typicons.font/typicons.css" rel="stylesheet">
+    <link href="../lib/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+
+    <!-- azia CSS -->
+    <link rel="stylesheet" href="../css/azia.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  </head>
+  <body>
+
+    <div class="az-header">
+      <div class="container">
+        <div class="az-header-left">
+          <a href="https://www.shannonhealth.com/" class="az-logo"><span></span>Shannon Health Care</a>
+          <a href="" id="azMenuShow" class="az-header-menu-icon d-lg-none"><span></span></a>
+        </div><!-- az-header-left -->
+        <div class="az-header-menu">
+          <div class="az-header-menu-header">
+            <a href="index.html" class="az-logo"><span></span>SHANNON HEALTH</a>
+            <a href="" class="close">&times;</a>
+          </div><!-- az-header-menu-header -->
+          <ul class="nav">
+            <li class="nav-item-active-show">
+              <a href="index.html" class="nav-link"><i class="typcn typcn-chart-area-outline" style = "color: green;"></i> Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://mychart.shannonhealth.org/mychart/Authentication/Login? " class="nav-link-with-sub" style ="color: green;"><i class="typcn typcn-document" ></i> MyChart</a>
+            </li>
+          </ul>
+        </div><!-- az-header-menu -->
+
+        <!-- top right options -->
+        <div class="az-header-right">
+          <a href="https://www.heart.org/en/healthy-living/fitness/fitness-basics/target-heart-rates" target="_blank" class="az-header-search-link"><i class="far fa-file-alt"></i></a>
+
+          <!-- NOTIFICATIONS DROPDOWN MENU -->
+          <div class="dropdown az-header-notification">
+            <a href="" class="new"><i class="typcn typcn-bell"></i></a>
+            <div class="dropdown-menu">
+              <div class="az-dropdown-header mg-b-20 d-sm-none">
+                <a href="" class="az-header-arrow"><i class="icon ion-md-arrow-back"></i></a>
+              </div>
+              <h6 class="az-notification-title">Notifications</h6>
+              <div class="az-notification-list" id = "notificationList">
+                <table class="table">
+                  <tbody id="tbody2"></tbody>
+                </table>
+              </div><!-- az-notification-list -->
+            </div><!-- dropdown-menu -->
+          </div>
+
+
+
+
+          </div><!-- az-header-notification -->
+          <div class="dropdown az-profile-menu">
+            <a href="" class="az-img-user"><img src="../img/shannon_logo.jpeg" alt=""></a>
+            <div class="dropdown-menu">
+              <div class="az-dropdown-header d-sm-none">
+                <a href="" class="az-header-arrow"><i class="icon ion-md-arrow-back"></i></a>
+              </div>
+
+              <!-- current user name and occupation -->
+              <div class="az-header-profile">
+                <div class="az-img-user">
+                  <img src="../img/shannon_logo.jpeg" alt="">
+                </div><!-- az-img-user -->
+                <h6>David Andrews</h6>
+                <span>Nurse</span>
+              </div><!-- az-header-profile -->
+
+              <!-- USER can link a page to change profile information and view Alert Logs if necessary-->  
+               
+              <a href="" class="dropdown-item"><i class="typcn typcn-user-outline"></i> My Profile</a>
+              <a href="" class="dropdown-item"><i class="typcn typcn-edit"></i> Edit Profile Information</a>
+              
+              <a href="page-signin.html" class="dropdown-item"><i class="typcn typcn-power-outline"></i> Sign Out</a>
+            </div><!-- dropdown-menu -->
+          </div>
+        </div><!-- az-header-right -->
+      </div><!-- container -->
+    </div><!-- az-header -->
+
+    <!-- dashboard header and greet section -->
+    <div class="az-content az-content-dashboard">
+      <div class="container">
+        <div class="az-content-body">
+          <div class="az-dashboard-one-title">
+            <div>
+              <h2 class="az-dashboard-title">Hi, welcome back!</h2>
+              <p class="az-dashboard-text">Shannon App dashboard</p>
+            </div>
+            <div class="az-content-header-right">
+              <div class="media">
+                <div class="media-body">
+                  <label>Start Date</label>
+                  <!-- script can be written to display start date since the current user joined or created an account-->
+                  <h6>2023-11-21</h6>
+                </div><!-- media-body -->
+              </div><!-- media -->
+              <div class="media">
+                <div class="media-body">
+                  <label>End Date</label>
+                  <h6>
+                    <script>
+                      // Get today's date
+                      var today = new Date();
+
+                      // Extract year, month, and day components
+                      var year = today.getFullYear();
+                      var month = ('0' + (today.getMonth() + 1)).slice(-2);
+                      var day = ('0' + today.getDate()).slice(-2);
+
+                      // Format the date (YYYY-MM-DD)
+                      var formattedDate = year + '-' + month + '-' + day;
+
+                      // Output the formatted date
+                      document.write(formattedDate);
+                    </script>
+                    </h6>
+                </div><!-- media-body -->
+              </div><!-- media -->
+              <div class="media">
+                <div class="media-body">
+                  <label>Event Category</label>
+                  <h6>Health Data</h6>
+                </div><!-- media-body -->
+              </div><!-- media -->
+              <a id= "extractToFile" href="" class="btn btn-purple">Export</a>
+            </div>
+          </div><!-- az-dashboard-one-title -->
+
+          <!-- dashboard navigation -->
+          <div class="az-dashboard-nav"> 
+            <nav class="nav">
+              <a class="nav-link-active" data-toggle="tab" href="#" style ="color: green;">Overview</a>
+              <!-- button to search for a patient, reference script below -->
+              <a>&nbsp;&nbsp;</a>
+              <a class="nav-link-active" id= "searchPatientLink" class="nav-link" data-toggle="tab" href="#" style ="color: green;">Search Patient</a>
+            </nav>
+
+            <!-- email link -->
+            <nav class="nav">
+              <a class="nav-link" href="https://mail.google.com/"><i class="far fa-envelope"></i>Access Gmail</a>
+              <a class="nav-link" href="#"><i class="fas fa-ellipsis-h"></i></a>
+            </nav>
+          </div>
+
+
+
+
+          <!-- Current user-->
+          <div class="row row-sm mg-b-20">
+            <div class="col-lg-10 ht-lg-100p">
+              <div class="card card-dashboard-one">
+                <div class="card-header">
+                  <div>
+                    <label class="mg-b-0" >Current Age:</label>
+                    <h2 id = "userAge"></h2>
+                  </div>
+                  <div>
+                    <label class="mg-b-0">Latest Heart Rate:</label>
+                    <h2 id = "lastHeartRate"></h2>
+                  </div>
+                  <div>
+                    <label class="mg-b-0">Breathing Rate/min:</label>
+                    <h2 id ="breathingRate"></h2>
+                  </div>
+                  <div>
+                    <label class="mg-b-0">Average daily steps:</label>
+                    <h2 id ="Average-daily-steps"></h2>
+                  </div>
+                  <div>
+                    <label class="mg-b-0">ECG sinus rhythm:</label>
+                    <h2 id ="ECG-sinus-rhythm"></h2>
+                  </div>
+                </div><!-- card-header -->
+                
+                <div class="card-body">
+                  <div class="card-body-top">
+                    <div>
+                      <label class="mg-b-0"><strong>Daily high heart rate for the past week&nbsp;&nbsp;</strong><small id="patientEmail"></small></label>
+                      <!-- Add current name via database -->
+                      <h2 id="patientNameDisplay"></h2>
+                    </div>
+                  </div><!-- card-body-top -->
+                  <div class="chart-wrapper">
+                    <div id="highHeartRate" class="flot-chart"></div>
+                  </div><!-- flot-chart-wrapper -->
+                </div><!-- card-body -->
+              </div><!-- card -->
+            </div><!-- col -->
+
+          
+            <div class="col-lg-10 mg-t-20">
+              <div class="card-header">
+                <p style="font-size: 17px; font-style: italic;">Heart Rate Variability (HRV) measures the variations in time between consecutive heartbeats. It indicates the body's ability to handle stress and reflects the balance between the sympathetic (fight-or-flight) and parasympathetic (rest-and-digest) nervous systems. Higher HRV often signifies better health and stress management, while lower HRV may indicate potential health issues or increased stress.</p>
+              </div>
+            </div>
+          
+
+            <!-- current heart rate-->
+            <div class="col-lg-10 mg-t-20 mg-lg-t-0">
+              <div class="row row-lg">
+                
+                <!--HIGH HEART RATE VARIABILIT-->
+                <div class="col-lg-12">
+                  <div class="card card-dashboard-two">
+                    <div class="card-header">
+                      <!-- link heart rate from swift and change icon accordingly-->
+                      <h6 id = "heartRateVarMax"><i class="icon ion-md-trending-up tx-success"></i> <small>High Heart Rate Variability (HRV)</small></h6>
+                      <!-- user current heartRate -->
+                      <p style = "font-size: 15px; font-style: italic;">Past 7 days [max 100]</p>
+                    </div><!-- card-header -->
+                    <div class="card-body">
+                      <div class="chart-wrapper">
+                        <div id="HeartRateVarMax" class="flot-chart"></div>
+                      </div><!-- chart-wrapper -->
+                    </div><!-- card-body -->
+                  </div><!-- card -->
+                </div><!-- col -->
+
+
+                <!--LOW HEART RATE VARIABILIT-->
+                <div class="col-lg-12 mg-t-10 mg-lgh-t-0">
+                  <div class="card card-dashboard-two">
+                    <div class="card-header">
+                      <!-- link low heart rate -->
+                      <h6 id = heartRateVarMin><i class="icon ion-md-trending-down tx-danger"></i> <small>Low Heart Rate Variability (HRV)</small></h6>
+                      <p style = "font-size: 15px; font-style: italic;">Past 7 days [max 100]</p>
+                    </div><!-- card-header -->
+                    <div class="card-body">
+                      <div class="chart-wrapper">
+                        <div id="HeartRateVarMin" class="flot-chart"></div>
+                      </div><!-- chart-wrapper -->
+                    </div><!-- card-body -->
+                  </div><!-- card -->
+                </div><!-- col -->
+
+
+
+
+                <div class="col-lg-12 mg-t-20">
+                  <div class="card-header">
+                    <p style="font-size: 20px; font-style: italic;">Resting Heart Rate Average[above] compared to Sleeping Heart Rate Average[below] of the past 7 days and nights</p>
+                  </div>
+                </div>
+                <!-- chart for displaying average resting and sleeping heart rate-->
+                <div class="col-lg-12 mg-t-0">
+                  <div class="card card-dashboard-three">
+                    <div class="chart"><canvas id="restingRateChart"></canvas></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 mg-t-20">
+                  <div class="card-header">
+                    <p style="font-size: 20px; font-style: italic;">VO₂ max refers to the maximum amount of oxygen your body can absorb and use during exercise. It measures a patients aerobic fitness levels.</p>
+                  </div>
+                </div>
+                
+                <!-- chart for displaying average resting and sleeping heart rate-->
+                <div class="col-lg-12 mg-t-0">    
+                  <div class="card card-dashboard-one">
+                    <div class="card-body">
+                      <div class="chart-wrapper">
+                        <div id="VO2MAX" class="flot-chart"></div>
+                      </div><!-- flot-chart-wrapper -->
+                    </div><!-- card-body -->
+                  </div><!-- card -->
+                </div>
+                  
+              
+              </div><!-- row -->
+            </div><!--col -->
+          </div><!-- row -->
+
+          <div class="row row-sm mg-b-20" >
+            <div class="col-lg-10">
+              <div class="card card-dashboard-pageviews" style="background-color: #f2f2f2;">
+                <div class="card-header">
+                  <h6 class="card-title">Important Alerts</h6>
+                  <p class="card-text">This report is based on the past week's alerts received</p>
+                </div><!-- card-header -->
+                <div class="card-body">
+                    <table class="table">
+                      <tbody id="tbody3"></tbody>
+                    </table>
+                </div><!-- card-body -->
+              </div><!-- card -->
+            </div><!-- col-lg-4 -->
+          </div><!-- row -->
+
+          <h2 class="az-content-title">Current Patients</h2>
+
+          <div class="filter-options">
+            <label>
+              <input type="checkbox" id="ageLessThan40"> Age &lt; 40
+            </label>
+            <label>
+              &nbsp;&nbsp;
+              <input type="checkbox" id="ageGreaterThan40"> Age &gt; 40
+            </label>
+            <label>
+              &nbsp;&nbsp;
+              <input type="checkbox" id="genderMale"> Male
+            </label>
+            <label>
+              &nbsp;&nbsp;
+              <input type="checkbox" id="genderFemale"> Female &nbsp;&nbsp;
+            </label>
+            <button id="applyFilters" style="background: mediumspringgreen">Apply Filters</button>
+          </div>
+
+          <!----- table to view all users ----->
+          <div class="class mt-3">
+            <table class="table table-success">
+              <thead>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Age</th>
+                <th>Town</th>
+                <th>Email</th>
+              </thead>
+              <tbody id="tbody1"></tbody>
+            </table>
+          </div><!-- bd -->
+
+
+        </div>  
+      </div>
+    </div><!-- az-content -->
+
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/ionicons/ionicons.js"></script>
+    <script src="../lib/jquery.flot/jquery.flot.js"></script>
+    <script src="../lib/jquery.flot/jquery.flot.resize.js"></script>
+    <script src="../lib/chart.js/Chart.bundle.min.js"></script>
+    <script src="../lib/peity/jquery.peity.min.js"></script>
+
+    <script src="../js/azia.js"></script>
+    <!-- Import user data file -->
+    <script src="../js/userData.js"></script>
+    <!-- Firebase Authentication -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js" type = "module"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js" type ="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  
+    
+    <script type = "module">
+      // DATABASE LINK AND INITIALIZATION
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+
+      // methods for accessing and importing realtime database 
+      import {getDatabase, ref, child, onValue, get } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"
+
+
+      // methods for accessings and importing firestore database
+      import {getFirestore, doc, getDoc, getDocs, onSnapshot, collection} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyBuLSDx9MjAGsWW0KzPm4mzA7r8n9vm3D8",
+        authDomain: "shannon-health-test.firebaseapp.com",
+        databaseURL: "https://shannon-health-test-default-rtdb.firebaseio.com",
+        projectId: "shannon-health-test",
+        storageBucket: "shannon-health-test.appspot.com",
+        messagingSenderId: "860503539230",
+        appId: "1:860503539230:web:c39d7f9604da47d966b80f"
+      };
+
+      // Initialize firebase
+      const app = initializeApp(firebaseConfig);
+
+      // realtime database
+      const db = getDatabase();
+
+      const firestore = getFirestore();
+
+    
+
+//-----------FILLING THE TABLE-------------//
+      
+      const tbody = document.getElementById("tbody1");
+
+      // Function to filter and display table data based on selected checkboxes
+      function applyFilters(patients) {
+        const ageLessThan40 = document.getElementById("ageLessThan40").checked;
+        const ageGreaterThan40 = document.getElementById("ageGreaterThan40").checked;
+        const genderMale = document.getElementById("genderMale").checked;
+        const genderFemale = document.getElementById("genderFemale").checked;
+
+        const filteredPatients = patients.filter(patient => {
+          const isAgeLessThan40 = !ageLessThan40 || (ageLessThan40 && patient.age < 40);
+          const isAgeGreaterThan40 = !ageGreaterThan40 || (ageGreaterThan40 && patient.age > 40);
+          const isGenderMale = !genderMale || (genderMale && patient.gender === 'M');
+          const isGenderFemale = !genderFemale || (genderFemale && patient.gender === 'F');
+
+          return isAgeLessThan40 && isAgeGreaterThan40 && isGenderMale && isGenderFemale;
+        });
+
+        return filteredPatients;
+      }
+
+      function AddItemToTable(name,gender,age,town,email) {
+        let row = document.createElement("tr");
+        let td1 = document.createElement("td");
+        let td2 = document.createElement("td");
+        let td3 = document.createElement("td");
+        let td4 = document.createElement("td");
+        let td5 = document.createElement("td");
+
+        td1.innerHTML = name;
+        td2.innerHTML = gender;
+        td3.innerHTML = age;
+        td4.innerHTML = town;
+        td5.innerHTML = email;
+
+        row.appendChild(td1);
+        row.appendChild(td2);
+        row.appendChild(td3);
+        row.appendChild(td4);
+        row.appendChild(td5);
+
+        tbody.appendChild(row);
+      }
+
+
+      // add all patients to the table 
+      function AddAllItemsToTable(patients) {
+          tbody.innerHTML = "";
+          patients.forEach(element => {
+            AddItemToTable(element.name,element.gender, element.age, element.location, element.email); 
+          });
+      }
+
+
+      //*******************GET PATIENT INFORMATION****************
+      // NAME, EMAIL, AGE, TOWN
+      const patientsRef = ref(db, 'Users/Patients');
+      //-------GET ALL DATA of PATIENTS------//
+      function GetAllData() {
+        return new Promise((resolve, reject) => {
+          get(patientsRef)
+            .then((snapshot) => {
+              let patients = [];
+
+              snapshot.forEach((childSnapshot) => {
+                patients.push(childSnapshot.val());
+              });
+              AddAllItemsToTable(patients);
+              resolve(patients);
+            })
+            .catch((error) => {
+              console.error("Error getting data", error);
+              reject([]);
+            });
+        });
+      }
+      
+      // Add an event listener to the "Patient Search" link
+      document.getElementById("applyFilters").addEventListener("click", function(event) {
+        GetAllData().then((patients) => {
+          const filteredPatients = applyFilters(patients);
+          AddAllItemsToTable(filteredPatients);
+        }) 
+      });
+      
+
+
+      //******************SEARCH FOR A PATIENT********************
+      let currentPatient; // Variable to store the found patient's name
+      async function searchPatient() {
+        try {
+          const patientFullName = await prompt("Enter the patient name and last name (e.g. John Doe):");
+          
+          return new Promise((resolve, reject) => {
+            get(patientsRef)
+              .then((snapshot) => {
+                const patients = snapshot.val();
+                if (patients) {
+                  const patientKeys = Object.keys(patients);
+                  let patientFound = false;
+
+                  for (let i = 0; i < patientKeys.length; i++) {
+                    const key = patientKeys[i];
+                    const patientName = patients[key].name;
+
+                    if (patientName === patientFullName) {
+                      patientFound = true;
+                      resolve(patientName);
+                      return; // Exit the loop once the patient is found
+                    }
+                  }
+
+                  if (!patientFound) {
+                    alert("Patient not found in the database");
+                    reject("Patient not found");
+                  }
+                } else {
+                  alert("No patients found in the database");
+                  reject("No patients found");
+                }
+              })
+              .catch((error) => {
+                console.error("Error getting patients: ", error);
+                reject(error);
+              });
+          });
+        } catch (error) {
+          console.error("Error:", error);
+          throw error;
+        }
+      }
+
+      // Add an event listener to the "Patient Search" link
+      document.getElementById("searchPatientLink").addEventListener("click", function(event) {
+          
+          // Prevent the default behavior of the link (e.g., navigating to another page)
+          event.preventDefault(); 
+          
+          // get patient name and information form GetAllData
+          searchPatient().then((result) => {
+            GetAllData().then((patients) => {
+              saveCurrentPatientData(patients, result);
+              DisplayUserData();
+            })
+          });
+  
+  
+        });
+
+      //***************PUBLIC VARIABLES***********************
+      // public variables to keep track of
+      let averageStepsDaily;
+      let totalWeeklySteps;
+      let maxHeartRatePastWeek = [];
+      let minHeartRatePastWeek = [];
+      
+      // ADD v02MAX graph
+      let weekly_vo2Max = [];
+
+      let weeklyHeartRateVariabilityMax = [];
+      let weeklyHeartRateVariabilityMin = [];
+      let ecgSinusRhythm;
+      let fallDetection;
+      let breathingRate_per_minute;
+      let weeklyLowHeartRateNotification = [];
+      let weeklyHighHeartRateNotification = [];
+      let averageRestingHeartRate = [];
+      let averageSleepingHeartRate =[];
+      let currentAge;
+      let currentLocation;
+      let latestHeartRate;
+      let patientEmail;
+      let patientName;
+
+
+      //**********SAVE CURRENT USER DATA IN VARIABLES*************
+      // save important patient data in arrays and variables
+      function saveCurrentPatientData(patients, currentPatient) {
+        
+          patients.forEach(element => {
+            const name = element.name;
+            // if the name matches the name we searched for
+            if(name === currentPatient) {
+              patientName = element.name;
+              patientEmail = element.email;
+              currentAge = element.age; 
+              currentLocation = element.location;
+              latestHeartRate = element.latest_heart_rate;
+              averageStepsDaily = element.average_daily_steps;
+              breathingRate_per_minute = element.breathing_rate_per_minute;
+              ecgSinusRhythm = element.ecg_sinus_rhythm;
+              maxHeartRatePastWeek = element.daily_heart_rate_max;
+              minHeartRatePastWeek = element.daily_heart_rate_min;
+              weekly_vo2Max = element.weekly_vo2_max;
+              weeklyHighHeartRateNotification = element.weekly_high_heart_rate_notification;
+              weeklyLowHeartRateNotification = element.weekly_low_heart_rate_notification;
+              fallDetection = element.fall_detection;
+              totalWeeklySteps = element.total_weekly_steps;
+              weeklyHeartRateVariabilityMax = element.weekly_heart_rate_variability_max;
+              weeklyHeartRateVariabilityMin = element.weekly_heart_rate_variability_min;
+              averageRestingHeartRate = element.average_resting_heartRate;
+              averageSleepingHeartRate = element.average_sleeping_heartRate;
+            }
+          });
+      }
+
+      //********************DISPLAY USER DATA*********************
+      // function to display current userData
+      function DisplayUserData() {
+  
+        // display data on the charts and graphs
+        plotMaxHeartRateData(maxHeartRatePastWeek);
+        plotHeartRateVarMax(weeklyHeartRateVariabilityMax);
+        plotHeartRateVarMin(weeklyHeartRateVariabilityMin);
+        plotRestingAndSleepingRate(averageRestingHeartRate, averageSleepingHeartRate);
+        plotVO2Max(weekly_vo2Max);
+        
+
+        // display data for current user above first graph/chart
+        document.getElementById("userAge").innerText = currentAge;
+        document.getElementById("lastHeartRate").innerText = latestHeartRate + "bpm";
+        document.getElementById("breathingRate").innerText = breathingRate_per_minute + "pm";
+        document.getElementById("Average-daily-steps").innerText = averageStepsDaily + "steps";
+        document.getElementById("ECG-sinus-rhythm").innerHTML = ecgSinusRhythm + "bpm"; 
+        document.getElementById("patientNameDisplay").innerText = patientName;
+        document.getElementById("patientEmail").innerText = '<' + patientEmail + '>';
+        
+        
+        //Get the max of the heartRateVarMax and ...Min
+        let max = 0;
+        let min = 100;
+        for (let i = 0; i < 7; i++) {
+          if (weeklyHeartRateVariabilityMax[i] > max) {
+            max = weeklyHeartRateVariabilityMax[i];
+          }
+
+          if(weeklyHeartRateVariabilityMin[i] < min) {
+            min = weeklyHeartRateVariabilityMin[i];
+          }
+        }
+
+        //set text for middle charts next to each other
+        document.getElementById("heartRateVarMax").innerHTML = max + '<i class="icon ion-md-trending-up tx-success"></i> <small>High Heart Rate Variability (HRV)</small>';
+        document.getElementById("heartRateVarMin").innerHTML = min + '<i class="icon ion-md-trending-down tx-danger"></i> <small>Low Heart Rate Variability (HRV)</small> ';
+      }
+
+      //************************NOTIFICATIONS***********************
+      const notificationsRef = ref(db, 'Users/ShannonWorker/Notifications');
+      
+      /// add notification to a row
+      function AddItemToNotification(notification) {
+        let row = document.createElement("tr");
+        let td1 = document.createElement("td");
+        td1.innerHTML = notification;
+        row.appendChild(td1);
+        document.getElementById("tbody2").appendChild(row);
+      }
+
+      // Add all Notifications to the table in the list 
+      function AddNotificationToTable(notifications) {
+        document.getElementById("tbody2").innerHTML ='';
+        notifications.forEach(element => {
+          AddItemToNotification(element)
+        })
+      }
+
+      //***************GET ALL NOTIFICATIONS********************
+      function getNotifications() {
+        return new Promise((resolve, reject) => {
+          get(notificationsRef)
+          .then((snapshot) => {
+            let notifications = [];
+            snapshot.forEach((childSnapshot) => {
+              notifications.push(childSnapshot.val());
+            });
+            AddNotificationToTable(notifications);
+            resolve(notifications);
+          })
+          .catch((error) => {
+            reject([]);
+          });
+        });
+      }
+
+      //*************************ALERTS************************
+      const alertRef = ref(db, 'Users/ShannonWorker/Alerts');
+      /// add notification to a row
+      function AddItemToAlerts(alert) {
+        let row = document.createElement("tr");
+        let td1 = document.createElement("td");
+        td1.innerHTML = alert;
+        row.appendChild(td1);
+        document.getElementById("tbody3").appendChild(row);
+      }
+
+      // Add all Notifications to the table in the list 
+      function AddAlertsToTable(alerts) {
+        document.getElementById("tbody3").innerHTML ='';
+        alerts.forEach(element => {
+          AddItemToAlerts(element);
+        })
+      }
+
+      //*******************GET ALL ALERTS********************
+      function getAlerts() {
+        return new Promise((resolve, reject) => {
+          get(alertRef)
+          .then((snapshot) => {
+            let alerts = [];
+            snapshot.forEach((childSnapshot) => {
+              alerts.push(childSnapshot.val());
+            });
+            AddAlertsToTable(alerts);
+            resolve(alerts);
+          })
+          .catch((error) => {
+            reject([]);
+          });
+        });
+      }
+
+
+
+      window.onload = () => {
+        getNotifications()
+          .then(notifications => {
+            return;
+          })
+          .catch(error => {
+            console.error("Error fetching notifications", error);
+          });
+
+        GetAllData()
+          .then(patients => {
+            return;
+          })
+          .catch(error => {
+            console.log("Error fetching patients data", error);
+          });
+          
+          getAlerts()
+            .then(alert => {
+              return;
+            })
+            .catch(error => {
+              console.log("Error fetching patients data", error);
+            });
+          
+      }
+
+
+      //******PLOT FIRST CHART/GRAPH WITH MAX HEART RATE DATA*****
+      function plotMaxHeartRateData(data) {
+        if (!Array.isArray(data) || data.length !== 7) {
+          console.error('Invalid or missing data for plotting.');
+          return;
+        }
+
+    		let plot = $.plot('#highHeartRate', [{
+          data: data.map((value, index) => [index * 10, value]),
+          color: '#007bff',
+          lines: {
+            fillColor: { colors: [{ opacity: 0 }, { opacity: 0.2 }]}
+          }
+        }], {
+    			series: {
+    				shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 2,
+              fill: true
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            labelMargin: 8
+          },
+          // Y -aixs values
+    			yaxis: {
+            show: true,
+            position: 'left',
+    				min: 0,
+    				max: 250,
+            ticks: [[0,''],[50,'50bpm'],[100,'100bpm'],[150,'150bpm'],[200,'200bpm']],
+            tickColor: '#eee'
+    			},
+    			xaxis: {
+            show: true,
+            min: -5,
+            max: 70,
+            color: '#fff',
+            ticks: pastWeekLabels.map((date, index) => [index * 10, date]) 
+          }
+        });
+      }
+
+      //******PLOT LAST CHART/GRAPH WITH VO2MAX DATA*****
+      function plotVO2Max(data) {
+        if (!Array.isArray(data) || data.length !== 7) {
+          console.error('Invalid or missing data for plotting.');
+          return;
+        }
+
+    		let plot = $.plot('#VO2MAX', [{
+          data: data.map((value, index) => [index * 10, value]),
+          color: '#007bff',
+          lines: {
+            fillColor: { colors: [{ opacity: 0 }, { opacity: 0.2 }]}
+          }
+        }], {
+    			series: {
+    				shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 2,
+              fill: true
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            labelMargin: 8
+          },
+          // Y -aixs values
+    			yaxis: {
+            show: true,
+            position: 'left',
+    				min: 0,
+    				max: 60,
+            ticks: [[0,''],[15,'15'],[30,'30'],[45,'45'],[60,'60']],
+            tickColor: '#eee'
+    			},
+    			xaxis: {
+            show: true,
+            min: -5,
+            max: 70,
+            color: '#fff',
+            ticks: pastWeekLabels.map((date, index) => [index * 10, date]) 
+          }
+        });
+      }
+      
+
+      //********************PLOT MIDDEL LEFT CHART****************
+      // Current Heart Rate past hour
+      function plotHeartRateVarMax(data) {
+        if (!Array.isArray(data) || data.length !== 7) {
+          console.error('Invalid or missing data for plotting.');
+          return;
+        }
+
+        let plot = $.plot('#HeartRateVarMax', [{
+          data: data.map((value, index) => [index * 10 , value]),
+          color: '#00cccc'
+        }], {
+    			series: {
+    				shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 2,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0.2 }, { opacity: 0.2 } ] }
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            labelMargin: 0
+          },
+    			yaxis: {
+            show: false,
+            min: 0,
+            max: 100 // max rate of 10 
+          },
+    			xaxis: {
+            show: false,
+            max: 60, // last 7 days
+          }
+    		});
+      }
+
+
+      //**************PLOT MIDDLE RIGHT CHART******************
+      // Low Heart Rate bar chart
+      function plotHeartRateVarMin(data) {
+        if (!Array.isArray(data) || data.length !== 7) {
+          console.error('Invalid or missing data for plotting.');
+          return;
+        }
+        $.plot('#HeartRateVarMin', [{
+          data: data.map((value, index) => [index * 10, value]),
+          color: '#007bff'
+        }], {
+    			series: {
+    				shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 2,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0.2 }, { opacity: 0.2 } ] }
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            labelMargin: 0
+          },
+    			yaxis: {
+            show: false,
+            min: 0,
+            max: 100 // max rate of 100
+          },
+    			xaxis: {
+            show: false,
+            max: 60, // last 60 minutes
+          }
+    		});
+      }
+
+      // Function to get labels for the past seven days
+      function getPastWeekLabels() {
+          let today = new Date();
+          let labels = [];
+          
+          today.setDate(today.getDate() - 1);
+          // Loop through the past seven days
+          for (let i = 6; i >= 0; i--) {
+            let pastDate = new Date(today);
+            pastDate.setDate(today.getDate() - i);
+
+            // Format date as 'Mon', 'Tue', etc.
+            let options = { weekday: 'short' };
+            let formattedDate = new Intl.DateTimeFormat('en-US', options).format(pastDate);
+            
+            labels.push(formattedDate);
+          }
+          
+          return labels;
+      }
+
+        // Use the function to get labels for the past seven days
+        const pastWeekLabels = getPastWeekLabels();
+
+      function plotRestingAndSleepingRate(restingRate, sleepingRate) {
+        if ((!Array.isArray(restingRate) || restingRate.length !== 7) && (!Array.isArray(sleepingRate) || sleepingRate.length !== 7)) {
+          console.error('Invalid or missing data for plotting.');
+          return;
+        }
+        var ctx5 = document.getElementById('restingRateChart').getContext('2d');
+        new Chart(ctx5, {
+          type: 'horizontalBar',
+          data: {
+            labels: pastWeekLabels,
+            datasets: [
+            {
+              // import resting heart rate
+              data: restingRate.map((value, index) => ({ x: value, y: index })),
+              backgroundColor: ['#560bd0', '#007bff','#74de00','#f10075','#74de00','#f10075']
+            }, {
+              // import sleeping heart rate
+              data: sleepingRate.map((value, index) => ({ x: value, y: index })),
+              backgroundColor: '#cad0e8'
+            }]
+          },
+          options: {
+            maintainAspectRatio: false,
+            legend: {
+              display: false,
+                labels: {
+                  display: false
+                }
+            },
+            scales: {
+              yAxes: [{
+                ticks: {
+                  beginAtZero:true,
+                  fontSize: 12,
+                }
+              }],
+              xAxes: [{
+                ticks: {
+                  beginAtZero:false,
+                  fontSize: 14,
+                  min:30,
+                  max:110
+                }
+              }]
+            }
+          }
+        });
+      }
+
+
+
+        //-------------------------------------------------------------//
+        // Line chart
+        $('.peity-line').peity('line');
+
+        // Bar charts
+        $('.peity-bar').peity('bar');
+
+        // Bar charts
+        $('.peity-donut').peity('donut');
+
+        
+
+        // Donut Chart
+        var datapie = {
+          labels: ['Search', 'Email', 'Referral', 'Social', 'Other'],
+          datasets: [{
+            data: [25,20,30,15,10],
+            backgroundColor: ['#6f42c1', '#007bff','#17a2b8','#00cccc','#adb2bd']
+          }]
+        };
+
+        var optionpie = {
+          maintainAspectRatio: false,
+          responsive: true,
+          legend: {
+            display: false,
+          },
+          animation: {
+            animateScale: true,
+            animateRotate: true
+          }
+        };
+    </script>
+
+    <script>
+      document.getElementById('extractToFile').addEventListener('click', function() {
+        // Get the content of the entire document
+        const content = document.documentElement.outerHTML;
+
+        // Create a Blob containing the content
+        const blob = new Blob([content], { type: 'text/html' });
+
+        // Create a temporary URL for the Blob
+        const url = URL.createObjectURL(blob);
+
+        // Create an <a> element to trigger the download
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'copied_data.html'; // Change the filename as needed
+        a.style.display = 'none';
+
+        // Append the <a> element to the body and click it programmatically
+        document.body.appendChild(a);
+        a.click();
+
+        // Remove the <a> element
+        document.body.removeChild(a);
+
+        // Release the temporary URL object
+        URL.revokeObjectURL(url);
+      });
+    </script>
+  </body>
+</html>
